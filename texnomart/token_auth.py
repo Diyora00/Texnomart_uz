@@ -17,7 +17,7 @@ class UserLoginAPIView(APIView):
         if serializer.is_valid():
             response = {
                 "username": {
-                    "detail": "User Doesnot exist!"
+                    "detail": "User does not exist!"
                 }
             }
             if User.objects.filter(username=request.data['username']).exists():

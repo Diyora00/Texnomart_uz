@@ -20,6 +20,7 @@ from debug_toolbar.toolbar import debug_toolbar_urls
 from django.conf import settings
 from django.conf.urls.static import static
 from texnomart.views import AllProductListView
+from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -27,3 +28,5 @@ urlpatterns = [
     path('texnomart-uz/', include('texnomart.urls')),
     path('texnomart-uz/', AllProductListView.as_view(), name='texnomart-uz'),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT) + debug_toolbar_urls()
+
+urlpatterns += staticfiles_urlpatterns()

@@ -17,7 +17,7 @@ def send_messages(sender, instance, **kwargs):
     created = kwargs.get('created', False)
     if created:
         message = 'Product is created'
-        to = 'jasurmavlonov24@gmail.com'
+        to = 'bdiyora008@gmail.com'
         email = EmailMessage(subject, message, to=[to])
         email.send()
         return
@@ -40,7 +40,7 @@ def send_messages(sender, instance, **kwargs):
     created = kwargs.get('created', False)
     if created:
         message = 'Category is created'
-        to = 'jasurmavlonov24@gmail.com'
+        to = 'bdiyora008@gmail.com'
         email = EmailMessage(subject, message,  to=[to])
         email.send()
         return
